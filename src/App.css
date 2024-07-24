@@ -1,38 +1,565 @@
-.App {
+
+body {
+  box-sizing: border-box;
+}
+
+*, :after, :before {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Header component properties */
+
+a {
+  text-decoration: none;
+}
+header a {
+  color: #495E57;
+}
+
+header a:hover {
+  color: #F4CE14;
+}
+
+header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+max-width: 800px;
+margin: 1.5rem auto;
+
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2.5rem;
+  font-weight: bold;
+  font-family: "Karla", serif;;
+  font-size: 1rem;
+}
+
+/* Main component hero section properties */
+
+.hero-bg {
+  background-color: #495E57;
+}
+
+.hero h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 3rem;
+  color: #F4CE14;
+  margin: 0;
+  font-weight: normal;
+ 
+}
+.hero h3 {
+  font-family: "Markazi Text", serif;
+  margin: -0.5em 0;
+  font-size: 1.8em;
+  font-weight: 100; 
+}
+
+.hero {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  position: relative;
+}
+
+.hero-info {
+  max-width: 800px;
+  width: 30%;
+  color: white;
+  font-family: "Karla", serif;
+  line-height: 1.3;
+
+}
+.hero-info p {
+  padding-top:  1.5rem;
+  padding-bottom: 2rem;
+}
+
+.hero-info button {
+  padding: 0.7rem 1.5rem;
+}
+
+.hero-img img {
+  width: 22rem;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  position: absolute;
+  top: 3em;
+  right: 0;
+  
+}
+
+/* Generic button properties */
+
+.btn {
+  border-radius: 1em;
+  font-weight: bold;
+  background-color: #F4CE14;
+  border: none;
+  cursor: pointer;
+}
+
+/* Specials section properties */
+
+.specials {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5em;
+  margin-bottom: 3em;
+}
+
+.specials h2 {
+  font-family: "Karla", serif;
+  color: #495E57;
+}
+
+.specials button {
+  margin-right: 2em;
+  padding: 1em 2em;
+}
+
+.specials-container {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-between;
+  
+}
+
+.specials-dish-card{
+  background-color: #EDEFEE;
+  border-radius: 0.7em 0.7em 0 0;
+  width: 15.5em;
+  display: flex;
+  flex-direction: column;
+  min-height: 30rem;
+  overflow: hidden;
+  align-content: space-around;
+  align-items: stretch;
+  justify-content: space-evenly;
+ 
+}
+
+.specials-dish-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.dish-price {
+  color: #EE9972;
+  font-weight: bold;
+  font-family: "Markazi Text", serif;
+  font-size: 1.2em;
+}
+
+.dish-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Markazi Text", serif;
+  padding: 1em 1em;
+}
+
+.dish-header h4 {
+  font-size: 1.5em;
+}
+
+.item-description {
+  font-family: "Karla", serif;
+  color: #495E57;
+  font-size: 1rem;
+  line-height: 1.2;
+  
+}
+
+.dish-footer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+}
+
+.delivery-btn {
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  cursor: pointer;
+  
+}
+
+span .scooter {
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 5%;
+}
+
+.testimonial-card svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.person-img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonials-section{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  font-family: "Karla", serif;
+  color: #495E57;
+}
+.testimonials-container{
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.5rem;
+  
+}
+
+.testimonial-card {
+  text-align: center;
+  background-color: #495E57;
+  color: #EDEFEE;
+  text-shadow: 0px 0px 1px #333;
+  border-radius: 15px;
+  padding: 1rem 0.8rem;
+  margin: 1rem 0;
+  width: 12rem;
+  height: 24rem;
+  font-family: "Karla", serif;
+  line-height: 1.3;
+}
+
+.testimonial-card h5 {
+  padding: 0.4rem 0;
+  font-size: 1.2rem;
+}
+
+.testimonial-card h6 {
+  padding-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.testimonial-card h6 span {
+  font-size: 1.2em;
+  display: inline-block;
+  margin-left: 0.4rem;
+  margin-bottom: -0.3rem;
+}
+
+/* About Us */
+.about-us-bgcolor {
+  background-color: #EDEFEE;
+  padding-top: 2rem;
+}
+
+.about-us {
+  display: flex;
+  max-width: 800px;
+  margin: 1rem auto;
+  gap: 9rem;
+  font-family: "Karla", serif;
+  line-height: 1.3;
+  color: #495E57;
+  margin-bottom: -1px;
+  
+}
+
+.about-us p {
+  padding-top: 1rem;
+ 
+}
+
+.about-us img {
+  width: auto;
+  height: 15rem;
+  object-fit: cover;
+  
+}
+
+.about-us-img-container {
+  position: relative;
+  width: auto;
+  height: 27rem;
+
+}
+
+.about-us-img-a {
+  border-radius: 15px;
+}
+
+.about-us-img-b {
+  position: absolute;
+  border-radius: 15px;
+  top: 30%;
+  right: 28%;
+}
+
+footer {
+  background-color: #495E57;
+  padding: 4rem;
+  margin: 0;
+  max-width: 100%;
+  height: 100%;
+  color: #EDEFEE;
+  line-height: 1.6;
+}
+footer a {
+  color: #EDEFEE;
+}
+.footer-container {
+  font-family: "Karla", serif;
+  max-width: 800px;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0 1rem;
+  
+}
+footer img {
+  margin-right: 0.5rem;
+  margin-top: 0.8rem;
+  height: 10rem;
+  width: auto;
+}
+footer h4 {
+  padding-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  
+}
+.social-media-icons svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.contact-icons svg {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: -0.13rem;
+  margin-right: 0.5rem;
+}
+
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #ffffff; 
+  overflow-x: hidden;
+  padding-top: 60px; 
+  transition: 0.5s; 
+  font-family: "Karla", serif;
+  list-style-type: none ;
+}
+
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #495E57;
+  display: block;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+
+.sidenav a:hover {
+  color: #F4CE14;
+}
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 2.5rem;
+  margin-left: 50px;
+}
+
+.toggle {
+  background-color: #333;
+}
+
+#navOpen {
+width: 18rem;
+}
+
+#navClose {
+width: 0;
+}
+
+header button {
+  background-color: #ffffff;
+  padding: 0.4rem 0.2rem 0.2rem 0.2rem;
+}
+
+.hamburger-menu-btn img{
+  height: 1.3rem;
+  width: 1.3rem;
+  cursor: pointer;
+  border: 0px solid white;
+}
+
+.hamburger-menu-btn:hover {
+  border: 0px solid #EDEFEE;
+  background-color: #EDEFEE;
+  border-radius: 3px;
+} 
+
+@media only screen and (max-width: 860px){
+ .nav-bar {
+  display: none;
+ }
+ .hamburger-menu-btn {
+  margin-right: 1rem;
+}
+
+ .hero-info{
+  padding-left: 1rem;
+}
+
+
+}
+@media only screen and (min-width: 801px) {
+  .hamburger-menu-btn {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .hero {
+    display: block;
+  }
+
+  .hero-info {
+   width: 100%;
+   padding: 0 2.5rem;
+  }
+
+  .hero-img img {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+ .logo {
+  margin-left: 1rem;
+ }
+
+  .specials {
+  flex-wrap: wrap;
+  padding: 0 1rem;
+ }
+ 
+.specials-container {
+  flex-wrap: wrap;
+  flex-shrink: 1 1 0;
+  justify-content: space-evenly;
+ }
+ .specials-dish-card {
+  margin-top: 1rem;
+ }
+
+ .testimonials-section {
+  padding-left: 1rem;
+ }
+
+ .testimonials-container {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+ }
+
+ .about-us {
+  padding: 1rem;
+ 
+}
+
+}
+
+@media only screen and (max-width: 860px) {
+.about-us {
+ flex-direction: column;
+ gap: 1rem;
+ 
+}
+
+.about-us img {
+  width: 80%;
+  height: 15rem;
+  object-fit: cover;
+  display: block;
+  margin: 1rem auto;
+  object-position: 80% 30%;
+}
+
+.about-us .about-us-img-b  {
+  position: unset;
+  object-fit: cover;
+  object-position: 80% 100%;
+}
+
+.about-us-img-container {
+height: auto;
+}
+
+
+
+.footer-container {
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: space-evenly;
+ 
+}
+footer h4 {
+  padding: 1.5rem 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
