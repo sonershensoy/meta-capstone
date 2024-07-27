@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "react-router-dom"
 // Components
 
 import Specials from "./Specials"
@@ -46,14 +46,14 @@ export default function Main() {
                     <h1>Little Lemon</h1>
                     <h3>Chicago</h3>
                     <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-                    <a href=""><button className="btn">Reserve a Table</button></a>
+                    <Link to="/reservations"><button className="btn">Reserve a Table</button></Link>
                 </div>
                 <div className="hero-img">
                     <img src={food} alt="" />
                 </div>
             </div>
         </section>
-        <section>
+        <section id="specials">
             <div className="specials">
              <h2>Specials</h2>
              <a href=""><button className="btn">Online Menu</button></a>
@@ -112,7 +112,7 @@ export default function Main() {
                 />
             </div>
         </section>
-        <section className="about-us-bgcolor">
+        <section className="about-us-bgcolor" id="about">
             <div className="about-us">
                 <div>
                     <h2>Little Lemon</h2>

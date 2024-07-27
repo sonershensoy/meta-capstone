@@ -1,5 +1,6 @@
 import React from "react"
 import hamburgerBtn from "../icons_assets/hamburger-btn.svg"
+import { Link } from "react-router-dom"
 
 export default function Nav({ toggleNav, toggleNavs }) {
  
@@ -7,19 +8,19 @@ export default function Nav({ toggleNav, toggleNavs }) {
     return (
       <>
         <ul className="nav-bar">
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Menu</a></li>
-          <li><a href="">Reservations</a></li>
+          <Link to="/">Home</Link>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#specials">Menu</a></li>
+          <Link to="/reservations">Reservations</Link>
           <li><a href="">Order Online</a></li>
           <li><a href="">Login</a></li>
         </ul>
         <div id={toggleNav ? "navOpen" : "navClose"} className="sidenav">
           <a href="#" className="closebtn" onClick={toggleNavs}>&times;</a>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Menu</a></li>
-          <li><a href="">Reservations</a></li>
+          <Link to="/">Home</Link>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#specials">Menu</a></li>
+          <Link to="/reservations">Reservations</Link>
           <li><a href="">Order Online</a></li>
           <li><a href="">Login</a></li>
         </div>

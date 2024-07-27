@@ -1,0 +1,14 @@
+.confirmation-container{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    height: 20rem;
+    margin-top: 10rem;
+}
+
+.confirmation-container svg {
+    width: 4rem;
+    height: 4rem;
+    padding-bottom: 0.5rem;
+}
+

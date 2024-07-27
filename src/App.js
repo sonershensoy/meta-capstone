@@ -1,17 +1,19 @@
 import React from "react"
 import ReactDOM from "react-dom/client";
+import { Routes, Route, Link } from "react-router-dom"
+import Homepage from "./pages/Homepage";
 import './App.css';
-import Header from "./components/Header.js"
-import Main from "./components/Main.js"
-import Footer from"./components/Footer.js"
-import Nav from"./components/Nav.js"
+import Reservations from "./pages/Reservations";
+import Confirmation from "./pages/ConfirmationPage";
 
 function App() {
   return (
     <>
-     <Header />
-     <Main />
-     <Footer />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/confirmation" element={<Confirmation />} />
+      </Routes>
     </>
   );
 }
